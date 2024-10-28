@@ -38,6 +38,7 @@ function userExists(username, password) {
   return userPresent;
 }
 
+// ========================= API 1 =========================
 app.get("/", (req, res) => {
   console.log(req.headers.auth, "========>");
 
@@ -53,6 +54,7 @@ app.get("/", (req, res) => {
   }
 });
 
+// ========================= API 2 =========================
 app.post("/signup", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
@@ -74,5 +76,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(8000, () => {
-  console.log("App Runing ....");
+  console.log("App Runing .... 8000");
 });
